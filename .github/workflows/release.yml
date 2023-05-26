@@ -36,4 +36,6 @@ jobs:
           pnpm node-pre-gyp package
 
       - name: Release
+        env:
+          NODE_PRE_GYP_GITHUB_TOKEN: ${{ secrets.NODE_PRE_GYP_GITHUB_TOKEN }}
         run: node-pre-gyp-github publish --release
