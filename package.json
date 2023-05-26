@@ -1,7 +1,7 @@
 {
   "name": "nodejs-jieba",
   "description": "chinese word segmentation for node",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Mister-Hope <mister-hope@outlook.com>",
   "license": "MIT",
   "contributors": [
