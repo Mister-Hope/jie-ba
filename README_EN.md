@@ -1,25 +1,25 @@
-# jie-ba [简体中文](README.md)
+# nodejs-jieba [简体中文](README.md)
 
 ## Introduction
 
-`jie-ba` provides chinese word segmentation for Node.js based on [CppJieba].
+`nodejs-jieba` provides chinese word segmentation for Node.js based on [CppJieba].
 
 ## Install
 
 ```sh
-npm install jie-ba
+npm install nodejs-jieba
 ```
 
 Or with `npmmirror.com`:
 
 ```sh
-npm install jie-ba --registry=https://registry.npmmirror.com --jie-ba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
+npm install nodejs-jieba --registry=https://registry.npmmirror.com --nodejs-jieba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
 ```
 
 ## Usage
 
 ```js
-import { cut } from "jie-ba";
+import { cut } from "nodejs-jieba";
 
 const result = cut("南京市长江大桥");
 console.log(result);
@@ -35,7 +35,7 @@ Initialization is optional and will be executed once `cut` is called with the de
 Loading the default dictionaries can be called explicitly by
 
 ```js
-import { load } from "jie-ba";
+import { load } from "nodejs-jieba";
 
 load();
 ```
@@ -53,7 +53,7 @@ If a dictionary parameter is missing, its default value will be uesd.
 ### POS Tagging
 
 ```js
-import { tag } from "jie-ba";
+import { tag } from "nodejs-jieba";
 
 console.log(tag("红掌拨清波"));
 //[ { word: '红掌', tag: 'n' },
@@ -66,7 +66,7 @@ See details in [test cases](__tests__/api.spec.ts)
 ### Keyword Extractor
 
 ```js
-import { extract, textRankExtract } from "jie-ba";
+import { extract, textRankExtract } from "nodejs-jieba";
 
 const topN = 4;
 

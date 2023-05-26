@@ -1,5 +1,5 @@
 {
-  "name": "jie-ba",
+  "name": "nodejs-jieba",
   "description": "chinese word segmentation for node",
   "version": "0.0.1",
   "author": "Mister-Hope <mister-hope@outlook.com>",
@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/Mister-Hope/jie-ba.git"
+    "url": "http://github.com/Mister-Hope/nodejs-jieba.git"
   },
   "keywords": [
     "chinese",
@@ -44,7 +44,7 @@
   "binary": {
     "module_name": "jieba",
     "module_path": "./build/Release/",
-    "host": "https://github.com/Mister-Hope/jie-ba/releases/download/",
+    "host": "https://github.com/Mister-Hope/nodejs-jieba/releases/download/",
     "remote_path": "v{version}",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
   },
@@ -76,5 +76,8 @@
     "rollup-plugin-esbuild": "^5.0.0",
     "typescript": "^5.0.4",
     "vitest": "^0.31.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

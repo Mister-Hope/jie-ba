@@ -1,8 +1,8 @@
-# jie-ba "结巴"分词的 Node.js 版本 [English](README_EN.md)
+# nodejs-jieba "结巴"分词的 Node.js 版本 [English](README_EN.md)
 
 ## 介绍
 
-`jie-ba`是"结巴"中文分词的 Node.js 版本实现，由[CppJieba]提供底层分词算法实现，是兼具高性能和易用性两者的 Node.js 中文分词组件。
+`nodejs-jieba`是"结巴"中文分词的 Node.js 版本实现，由[CppJieba]提供底层分词算法实现，是兼具高性能和易用性两者的 Node.js 中文分词组件。
 
 ## 特点
 
@@ -14,19 +14,19 @@
 ## 下载
 
 ```sh
-npm install jie-ba
+npm install nodejs-jieba
 ```
 
 由于默认源速度很慢并且 GitHub 访问不稳定，可以使用国内镜像，命令如下：
 
 ```sh
-npm install jie-ba --registry=https://registry.npmmirror.com --jie-ba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
+npm install nodejs-jieba --registry=https://registry.npmmirror.com --nodejs-jieba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
 ```
 
 ## 用法
 
 ```js
-import { cut } from "jie-ba";
+import { cut } from "nodejs-jieba";
 
 const result = cut("南京市长江大桥");
 console.log(result);
@@ -42,7 +42,7 @@ console.log(result);
 如果要主动触发词典载入，则使用以下函数主动触发。
 
 ```js
-import { load } from "jie-ba";
+import { load } from "nodejs-jieba";
 
 load();
 ```
@@ -54,7 +54,7 @@ load();
 比如载入自己的用户词典:
 
 ```js
-import { load } from "jie-ba";
+import { load } from "nodejs-jieba";
 
 load({
   userDict: "./test/testdata/userdict.utf8",
@@ -71,7 +71,7 @@ import {
   DEFAULT_IDF_DICT,
   DEFAULT_STOP_WORD_DICT,
   load,
-} from "jie-ba";
+} from "nodejs-jieba";
 
 load({
   dict: DEFAULT_DICT,
@@ -93,7 +93,7 @@ load({
 ### 词性标注
 
 ```js
-import { tag } from "jie-ba";
+import { tag } from "nodejs-jieba";
 
 console.log(tag("红掌拨清波"));
 //[ { word: '红掌', tag: 'n' },
@@ -106,7 +106,7 @@ console.log(tag("红掌拨清波"));
 ### 关键词抽取
 
 ```js
-import { extract, textRankExtract } from "jie-ba";
+import { extract, textRankExtract } from "nodejs-jieba";
 
 const topN = 4;
 
