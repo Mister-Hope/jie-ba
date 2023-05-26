@@ -3,10 +3,10 @@ name: Test
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
 
 jobs:
   test:
@@ -31,7 +31,7 @@ jobs:
           cache: "pnpm"
 
       - name: BenchMark
-        run: pnpm test:bench
+        run: pnpm test:benchmark
 
       - name: Coverage
         run: pnpm test:coverage
