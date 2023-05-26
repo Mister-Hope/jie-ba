@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const bindingPath = binary.find(resolve(__dirname, "../package.json"));
 
 const require = createRequire(import.meta.url);
-const nodejieba: Record<
+const jieBa: Record<
   string,
   (...args: unknown[]) => unknown
 > = require(bindingPath);
@@ -42,13 +42,13 @@ export const load = ({
 }: LoadOptions = {}): void => {
   isDictLoaded = true;
 
-  return <void>nodejieba.load(dict, hmmDict, userDict, idfDict, stopWordDict);
+  return <void>jieBa.load(dict, hmmDict, userDict, idfDict, stopWordDict);
 };
 
 const wrapper = <T = unknown>(name: string, ...args: any[]): T => {
   if (!isDictLoaded) load();
 
-  return <T>nodejieba[name].apply(this, args);
+  return <T>jieBa[name].apply(this, args);
 };
 
 export const cut = (content: string, strict = false): string[] =>

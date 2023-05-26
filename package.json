@@ -1,15 +1,16 @@
 {
-  "name": "nodejieba",
+  "name": "jie-ba",
   "description": "chinese word segmentation for node",
-  "version": "2.6.0",
-  "author": "Yanyi Wu <i@yanyiwu.com>",
+  "version": "0.0.1",
+  "author": "Mister-Hope <mister-hope@outlook.com>",
   "license": "MIT",
-  "maintainers": [
-    "Yanyi Wu <i@yanyiwu.com>"
+  "contributors": [
+    "Yanyi Wu <i@yanyiwu.com>",
+    "Mister-Hope <mister-hope@outlook.com>"
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/yanyiwu/nodejieba.git"
+    "url": "http://github.com/Mister-Hope/jie-ba.git"
   },
   "keywords": [
     "chinese",
@@ -41,9 +42,9 @@
     "binding.gyp"
   ],
   "binary": {
-    "module_name": "nodejieba",
+    "module_name": "jieba",
     "module_path": "./build/Release/",
-    "host": "https://github.com/yanyiwu/nodejieba/releases/download/",
+    "host": "https://github.com/Mister-Hope/jie-ba/releases/download/",
     "remote_path": "v{version}",
     "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
   },

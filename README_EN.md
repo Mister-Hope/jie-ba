@@ -1,40 +1,25 @@
-[![Build Status](https://travis-ci.org/yanyiwu/nodejieba.png?branch=master)](https://travis-ci.org/yanyiwu/nodejieba)
-[![Financial Contributors on Open Collective](https://opencollective.com/nodejieba/all/badge.svg?label=financial+contributors)](https://opencollective.com/nodejieba) [![Author](https://img.shields.io/badge/author-@yanyiwu-blue.svg?style=flat)](http://yanyiwu.com/)
-[![Donate](https://img.shields.io/badge/donate-eos_gitdeveloper-orange.svg)](https://eosflare.io/account/gitdeveloper)
-[![Platform](https://img.shields.io/badge/platform-Linux,%20OS%20X,%20Windows-green.svg?style=flat)](https://github.com/yanyiwu/nodejieba)
-[![Performance](https://img.shields.io/badge/performance-excellent-brightgreen.svg?style=flat)](http://yanyiwu.com/work/2015/06/14/jieba-series-performance-test.html)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg?style=flat)](http://yanyiwu.mit-license.org)
-[![NpmDownload Status](http://img.shields.io/npm/dm/nodejieba.svg)](https://www.npmjs.org/package/nodejieba)
-[![NPM Version](https://img.shields.io/npm/v/nodejieba.svg?style=flat)](https://www.npmjs.org/package/nodejieba)
-[![Code Climate](https://codeclimate.com/github/yanyiwu/nodejieba/badges/gpa.svg)](https://codeclimate.com/github/yanyiwu/nodejieba)
-[![Coverage Status](https://coveralls.io/repos/yanyiwu/nodejieba/badge.svg?branch=master&service=github)](https://coveralls.io/github/yanyiwu/nodejieba?branch=master)
-
----
-
-# NodeJieba [简体中文](README.md)
-
-[![logo](http://images.yanyiwu.com/NodeJiebaLogo-v1.png)](https://github.com/yanyiwu/nodejieba)
+# jie-ba [简体中文](README.md)
 
 ## Introduction
 
-`NodeJieba` provides chinese word segmentation for Node.js based on [CppJieba].
+`jie-ba` provides chinese word segmentation for Node.js based on [CppJieba].
 
 ## Install
 
 ```sh
-npm install nodejieba
+npm install jie-ba
 ```
 
 Or with `npmmirror.com`:
 
 ```sh
-npm install nodejieba --registry=https://registry.npmmirror.com --nodejieba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
+npm install jie-ba --registry=https://registry.npmmirror.com --jie-ba_binary_host_mirror=https://registry.npmmirror.com/-/binary/nodejieba/
 ```
 
 ## Usage
 
 ```js
-import { cut } from "nodejieba";
+import { cut } from "jie-ba";
 
 const result = cut("南京市长江大桥");
 console.log(result);
@@ -50,7 +35,7 @@ Initialization is optional and will be executed once `cut` is called with the de
 Loading the default dictionaries can be called explicitly by
 
 ```js
-import { load } from "nodejieba";
+import { load } from "jie-ba";
 
 load();
 ```
@@ -68,7 +53,7 @@ If a dictionary parameter is missing, its default value will be uesd.
 ### POS Tagging
 
 ```js
-import { tag } from "nodejieba";
+import { tag } from "jie-ba";
 
 console.log(tag("红掌拨清波"));
 //[ { word: '红掌', tag: 'n' },
@@ -81,7 +66,7 @@ See details in [test cases](__tests__/api.spec.ts)
 ### Keyword Extractor
 
 ```js
-import { extract, textRankExtract } from "nodejieba";
+import { extract, textRankExtract } from "jie-ba";
 
 const topN = 4;
 
@@ -107,65 +92,8 @@ See details in [test cases](__tests__/api.spec.ts)
 - `v18`
 - `v20`
 
-## Use Cases
-
-- [gitbook-plugin-search-pro]
-- [pinyin]
-
-## Similar projects
-
-- [@node-rs/jieba](https://github.com/Brooooooklyn/node-rs/tree/master/packages/jieba)
-
 ## Performance
 
-It is supposed to have the best performance out of all available Node.js modules. There is a post available in mandarin [Jieba 中文分词系列性能评测].
-
-## Online Demo
-
-<http://cppjieba-webdemo.herokuapp.com/> (chrome is suggested)
-
-## Contact
-
-Email: `i@yanyiwu.com`
-
-## Author
-
-- [YanyiWu]
-- [contributors]
+It is supposed to have the best performance out of all available Node.js modules.
 
 [CppJieba]: https://github.com/yanyiwu/cppjieba.git
-[contributors]: https://github.com/yanyiwu/nodejieba/graphs/contributors
-[YanyiWu]: http://yanyiwu.com
-[gitbook-plugin-search-pro]: https://plugins.gitbook.com/plugin/search-pro
-[pinyin]: https://github.com/hotoo/pinyin
-
-## Contributors
-
-### Code Contributors
-
-This project exists thanks to all the people who contribute.
-
-<a href="https://github.com/yanyiwu/nodejieba/graphs/contributors"><img src="https://opencollective.com/nodejieba/contributors.svg?width=890&button=false" /></a>
-
-### Financial Contributors
-
-Become a financial contributor and help us sustain our community. [[Contribute](https://opencollective.com/nodejieba/contribute)]
-
-#### Individuals
-
-<a href="https://opencollective.com/nodejieba"><img src="https://opencollective.com/nodejieba/individuals.svg?width=890"></a>
-
-#### Organizations
-
-Support this project with your organization. Your logo will show up here with a link to your website. [Contribute](https://opencollective.com/nodejieba/contribute)
-
-<a href="https://opencollective.com/nodejieba/organization/0/website"><img src="https://opencollective.com/nodejieba/organization/0/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/1/website"><img src="https://opencollective.com/nodejieba/organization/1/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/2/website"><img src="https://opencollective.com/nodejieba/organization/2/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/3/website"><img src="https://opencollective.com/nodejieba/organization/3/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/4/website"><img src="https://opencollective.com/nodejieba/organization/4/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/5/website"><img src="https://opencollective.com/nodejieba/organization/5/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/6/website"><img src="https://opencollective.com/nodejieba/organization/6/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/7/website"><img src="https://opencollective.com/nodejieba/organization/7/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/8/website"><img src="https://opencollective.com/nodejieba/organization/8/avatar.svg"></a>
-<a href="https://opencollective.com/nodejieba/organization/9/website"><img src="https://opencollective.com/nodejieba/organization/9/avatar.svg"></a>

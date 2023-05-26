@@ -1,7 +1,7 @@
 {
   "targets": [
     {
-      "target_name": "nodejieba",
+      "target_name": "jieba",
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
       "xcode_settings": { "GCC_ENABLE_CPP_EXCEPTIONS": "YES",
