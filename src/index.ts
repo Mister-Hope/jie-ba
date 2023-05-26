@@ -39,10 +39,10 @@ export const load = ({
   userDict = DEFAULT_USER_DICT,
   idfDict = DEFAULT_IDF_DICT,
   stopWordDict = DEFAULT_STOP_WORD_DICT,
-}: LoadOptions = {}) => {
+}: LoadOptions = {}): void => {
   isDictLoaded = true;
 
-  return nodejieba.load(dict, hmmDict, userDict, idfDict, stopWordDict);
+  return <void>nodejieba.load(dict, hmmDict, userDict, idfDict, stopWordDict);
 };
 
 const wrapper = <T = unknown>(name: string, ...args: any[]): T => {
