@@ -37,7 +37,7 @@
   "files": [
     "deps",
     "dist",
-    "dic",
+    "dict",
     "lib",
     "binding.gyp"
   ],
