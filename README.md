@@ -128,7 +128,6 @@ console.log(textRankExtract("升职加薪，当上CEO，走上人生巅峰。", 
 
 ## Node.js 支持
 
-- `v16`
 - `v18`
 - `v20`
 

@@ -1,17 +1,7 @@
 {
   "name": "nodejs-jieba",
-  "description": "chinese word segmentation for node",
   "version": "0.1.1",
-  "author": "Mister-Hope <mister-hope@outlook.com>",
-  "license": "MIT",
-  "contributors": [
-    "Yanyi Wu <i@yanyiwu.com>",
-    "Mister-Hope <mister-hope@outlook.com>"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "http://github.com/Mister-Hope/nodejs-jieba.git"
-  },
+  "description": "chinese word segmentation for node",
   "keywords": [
     "chinese",
     "segment",
@@ -20,9 +10,16 @@
     "中文分词",
     "结巴分词"
   ],
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "typings": "./dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Mister-Hope/nodejs-jieba.git"
+  },
+  "license": "MIT",
+  "author": "Mister-Hope <mister-hope@outlook.com>",
+  "contributors": [
+    "Yanyi Wu <i@yanyiwu.com>",
+    "Mister-Hope <mister-hope@outlook.com>"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -31,9 +28,9 @@
       "default": "./dist/index.mjs"
     }
   },
-  "engines": {
-    "node": ">= 16"
-  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "typings": "./dist/index.d.ts",
   "files": [
     "deps",
     "dist",
@@ -44,24 +41,23 @@
   "binary": {
     "module_name": "jieba",
     "module_path": "./build/Release/",
-    "host": "https://github.com/Mister-Hope/nodejs-jieba/releases/download/",
     "remote_path": "v{version}",
-    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz"
+    "package_name": "{module_name}-v{version}-{node_abi}-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/Mister-Hope/nodejs-jieba/releases/download/"
   },
   "scripts": {
     "binary:build": "node-gyp configure && node-pre-gyp build",
-    "binary:rebuild": "node-pre-gyp rebuild",
     "binary:pack": "node-pre-gyp package",
+    "binary:rebuild": "node-pre-gyp rebuild",
     "binary:release": "node-pre-gyp-github publish --release",
     "build": "rollup -c rollup.config.ts --configPlugin esbuild",
     "clean": "rimraf build/ dist/",
+    "install": "node-pre-gyp install --fallback-to-build",
+    "prepublishOnly": "pnpm clean && pnpm build",
     "test": "vitest",
     "test:benchmark": "vitest bench",
-    "test:coverage": "vitest --coverage",
-    "install": "node-pre-gyp install --fallback-to-build",
-    "prepublishOnly": "pnpm clean && pnpm build"
+    "test:coverage": "vitest --coverage"
   },
-  "packageManager": "pnpm@8.11.0",
   "dependencies": {
     "@mapbox/node-pre-gyp": "^1.0.11",
     "node-addon-api": "^7.0.0",
@@ -78,6 +74,10 @@
     "rollup-plugin-esbuild": "6.1.0",
     "typescript": "5.3.2",
     "vitest": "0.34.6"
+  },
+  "packageManager": "pnpm@8.11.0",
+  "engines": {
+    "node": "^18.0.0 || ^20.0.0"
   },
   "publishConfig": {
     "access": "public"
