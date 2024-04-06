@@ -64,7 +64,7 @@
     "node-gyp": "^10.0.1"
   },
   "devDependencies": {
-    "@types/node": "20.10.0",
+    "@types/node": "20.12.5",
     "@vitest/coverage-v8": "0.34.6",
     "esbuild": "0.19.8",
     "node-pre-gyp-github": "1.4.4",
