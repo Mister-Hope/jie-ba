@@ -15,7 +15,7 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - ubuntu-22.04
+          - ubuntu-latest
           - macos-latest
           - windows-latest
         node-version:
@@ -50,5 +50,5 @@ jobs:
         run: pnpm test:coverage
 
       - name: Upload coverage
-        if: github.ref == 'refs/heads/master'
-        uses: codecov/codecov-action@v3
+        if: github.ref == 'refs/heads/main'
+        uses: codecov/codecov-action@v5
