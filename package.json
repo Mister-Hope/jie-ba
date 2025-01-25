@@ -1,6 +1,6 @@
 {
   "name": "nodejs-jieba",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "description": "chinese word segmentation for node",
   "keywords": [
     "chinese",
